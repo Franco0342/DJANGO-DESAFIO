@@ -1,0 +1,21 @@
+{% extends "Laweb/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+<h1 class="mb-5">ESTE TITULO VIENE DE INICIO</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+<H1>FORMULARIO DE CLIENTE</H1>
+<form action="{%url 'clienteForm' %}" method="POST"> {% csrf_token %} 
+<table>
+
+    {{ formulario.as_table }}
+
+</table>
+
+<input type="submit", value="Enviar">
+</form>
+
+{% endblock %}
