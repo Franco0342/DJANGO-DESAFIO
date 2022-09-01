@@ -6,12 +6,11 @@ from datetime import date
 from .models import Cliente, Pedidos, Producto
 from Laweb.forms import ClienteForm, ProductForm, PedidoForm
 
-# Create your views here.
-#year=1972 month=1 day=3 ,fecha_nacimiento= datetime(year=year, month=month, day=day),
+
 
 
 def inicio(request):
-    return render(request, "Laweb/inicio.html")
+    return render(request, "template/inicio.html")
 
 def clienteForm(request):
     if request.method=="POST":
