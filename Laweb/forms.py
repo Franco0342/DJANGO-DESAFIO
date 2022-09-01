@@ -1,8 +1,6 @@
 import imp
-from tabnanny import verbose
 from django import forms
-from datetime import date
-import datetime
+
 
 class ClienteForm(forms.Form):
     nombre=forms.CharField(max_length=50)
