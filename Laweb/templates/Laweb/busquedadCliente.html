@@ -1,0 +1,22 @@
+{% extends "Laweb/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+<h1 class="mb-5">BUSQUEDAD CLIENTE</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+
+<H1>Buscamos cliente por Apellido</H1>
+
+
+<form action="{%url 'buscar' %}" method="GET"> {% csrf_token %} 
+
+<input type="text" name="apellido" id="apellido">   
+
+<input type="submit" value="Buscar">
+</form>
+
+{% endblock %}
